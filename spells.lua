@@ -1,8 +1,7 @@
 local izi = require("common/izi_sdk")
-local enums = require("common/enums")
 local spell = izi.spell
 
----@class dk_unholy_spells
+---@class warrior_fury_spells
 local SPELLS =
 {
     -- Cooldowns
@@ -22,7 +21,7 @@ local SPELLS =
     REND = spell(772),
     WHIRLWIND = spell(190411),
     THUNDER_CLAP = spell(6343),
-    THUNDER_BLAST = spell(435607),
+    THUNDER_BLAST = spell(435222),
 }
 
 return SPELLS
