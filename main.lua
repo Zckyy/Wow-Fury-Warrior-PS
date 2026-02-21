@@ -1,6 +1,7 @@
 -- ============================================
 -- DEPENDENCIES
 -- ============================================
+local SPELLS = require("spells")
 local izi = require("common/izi_sdk")
 local enums = require("common/enums")
 local key_helper = require("common/utility/key_helper")
@@ -17,24 +18,6 @@ local CONSTANTS = {
     IMPROVED_WHIRLWIND = 12950,
     CRASHING_THUNDER = 436707,
     THUNDER_BLAST = 435607,
-}
-
-local SPELLS = {
-    RAGING_BLOW = izi.spell(85288),
-    CRUSHING_BLOW = izi.spell(335097),
-    BLOODTHIRST = izi.spell(23881),
-    BLOODBATH = izi.spell(335096),
-    RAMPAGE = izi.spell(184367),
-    EXECUTE = izi.spell(163201),
-    EXECUTE_SUDDEN_DEATH = izi.spell(5308),
-    RECKLESSNESS = izi.spell(1719),
-    AVATAR = izi.spell(107574),
-    ODYNS_FURY = izi.spell(385059),
-    REND = izi.spell(772),
-    WHIRLWIND = izi.spell(190411),
-    THUNDER_CLAP = izi.spell(6343),
-    THUNDER_BLAST = izi.spell(435607),
-    BLADESTORM = izi.spell(227847),
 }
 
 local CUSTOMBUFFS = {
