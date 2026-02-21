@@ -58,12 +58,12 @@ function slayer.execute(target, me, player_buffs, cooldown_toggle, aoe_active, r
     end
 
     -- 8. actions.slayer+=/bladestorm,if=buff.enrage.remains>1
-    if actions.execute_bladestorm(target, player_buffs) then
+    if actions.execute_bladestorm(target, player_buffs, in_combat) then
         return true
     end
 
     -- 9. actions.slayer+=/execute
-    if actions.execute_execute(target, player_buffs, rage_current) then
+    if actions.execute_execute(target, player_buffs, rage_current > 0) then
         return true
     end
 
@@ -114,7 +114,7 @@ function slayer.execute(target, me, player_buffs, cooldown_toggle, aoe_active, r
     -- 16. actions.slayer+=/rend
     -- Target debuffs needed.
     local target_debuffs = { rend = target:has_debuff(buffs.REND) }
-    if actions.execute_rend(target, in_combat, target_in_melee, target_debuffs) then
+    if actions.execute_rend(target, target_debuffs, in_combat) then
         return true
     end
 
